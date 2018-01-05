@@ -1,0 +1,19 @@
+{
+	"name": "backgammon",
+	"version": "1.0.0",
+	"description": "open source backgammon game",
+	"main": "pages/index.js",
+	"repository": "git@github.com:netspencer/backgammon.git",
+	"author": "Spencer Schoeben <spencer@netspencer.com>",
+	"license": "MIT",
+	"dependencies": {
+		"immer": "^0.2.2",
+		"next": "^4.2.1",
+		"next-redux-wrapper": "^1.3.5",
+		"react": "^16.2.0",
+		"react-dom": "^16.2.0",
+		"react-redux": "^5.0.6",
+		"redux": "^3.7.2",
+		"styled-components": "^2.4.0"
+	}
+}
