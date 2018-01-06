@@ -35,4 +35,3 @@ class DiceHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
         (root + 'f', DiceHandler),
     ], debug = True)
-

@@ -1,2 +1,3 @@
-# backgammon
-my open source digital backgammon game
+# distractions
+
+open source online games
