@@ -1,11 +1,18 @@
 import React from 'react'
 import withRedux from 'next-redux-wrapper'
 import { initStore } from '../store'
-import BackgroundTexture from '../components/BackgroundTexture'
+import GameContainer from '../components/GameContainer'
+import Dice from '../components/Dice'
+
+import { Entity } from 'aframe-react'
 
 class Counter extends React.Component {
 	render() {
-		return <BackgroundTexture />
+		return (
+			<GameContainer>
+				<Dice />
+			</GameContainer>
+		)
 	}
 }
 

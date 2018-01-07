@@ -38,6 +38,7 @@ function dice_initialize(container) {
 	})
 
 	var box = new $t.dice.dice_box(canvas, { w: 500, h: 300 })
+	console.log(box)
 	box.animate_selector = false
 
 	$t.bind(window, 'resize', function() {

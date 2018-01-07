@@ -469,7 +469,7 @@
 		shininess: 0,
 		emissive: 0x858787
 	}
-	this.desk_color = 0xdfdfdf
+	this.desk_color = 0xffffff
 
 	this.known_types = ['d4', 'd6', 'd8', 'd10', 'd12', 'd20', 'd100']
 	this.dice_face_range = {
