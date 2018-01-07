@@ -23,5 +23,8 @@
 		"redux-thunk": "^2.2.0",
 		"styled-components": "^2.4.0",
 		"styled-normalize": "^2.2.1"
+	},
+	"devDependencies": {
+		"flow-bin": "^0.62.0"
 	}
 }

@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
 		return (
 			<html>
 				<Head>
-					<title>backgammon</title>
+					<title>distractions</title>
 					{this.props.styleTags}
 				</Head>
 				<body>
