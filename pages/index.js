@@ -1,19 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react'
 import withRedux from 'next-redux-wrapper'
 import { initStore } from '../store'
-import GameContainer from '../components/GameContainer'
-import Dice from '../components/Dice'
+import DiceSet from '../components/DiceSet'
 
-import { Entity } from 'aframe-react'
-
-class Counter extends React.Component {
+class Dice extends Component {
 	render() {
-		return (
-			<GameContainer>
-				<Dice />
-			</GameContainer>
-		)
+		return <DiceSet />
 	}
 }
 
-export default withRedux(initStore)(Counter)
+export default withRedux(initStore)(Dice)
