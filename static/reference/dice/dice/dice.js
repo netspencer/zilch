@@ -632,7 +632,7 @@
 
 	var that = this
 
-	this.dice_box = function(container, dimentions) {
+	this.dice_box = function(container) {
 		this.use_adapvite_timestep = true
 		this.animate_selector = true
 
@@ -648,7 +648,7 @@
 		this.renderer.shadowMap.type = THREE.PCFShadowMap
 		this.renderer.setClearColor(0xffffff, 1)
 
-		this.reinit(container, dimentions)
+		this.reinit(container)
 
 		this.world.gravity.set(0, 0, -9.8 * 800)
 		this.world.broadphase = new CANNON.NaiveBroadphase()
@@ -715,16 +715,12 @@
 		this.renderer.render(this.scene, this.camera)
 	}
 
-	this.dice_box.prototype.reinit = function(container, dimentions) {
+	this.dice_box.prototype.reinit = function(container) {
 		this.cw = container.clientWidth / 2
 		this.ch = container.clientHeight / 2
-		if (dimentions) {
-			this.w = dimentions.w
-			this.h = dimentions.h
-		} else {
-			this.w = this.cw
-			this.h = this.ch
-		}
+		this.w = this.cw
+		this.h = this.ch
+
 		this.aspect = Math.min(this.cw / this.w, this.ch / this.h)
 		that.scale = Math.sqrt(this.w * this.w + this.h * this.h) / 13
 

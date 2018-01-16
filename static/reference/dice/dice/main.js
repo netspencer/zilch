@@ -37,14 +37,14 @@ function dice_initialize(container) {
 		on_set_change()
 	})
 
-	var box = new $t.dice.dice_box(canvas, { w: 500, h: 300 })
+	var box = new $t.dice.dice_box(canvas)
 	console.log(box)
 	box.animate_selector = false
 
 	$t.bind(window, 'resize', function() {
 		canvas.style.width = window.innerWidth - 1 + 'px'
 		canvas.style.height = window.innerHeight - 1 + 'px'
-		box.reinit(canvas, { w: 500, h: 300 })
+		box.reinit(canvas)
 	})
 
 	function show_selector() {

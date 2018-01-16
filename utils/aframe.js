@@ -17,7 +17,7 @@ AFRAME.registerComponent('dice', {
 		const { width, height, depth, color } = this.data
 
 		// Create geometry.
-		this.geometry = create_d6_geometry(SCALE * 0.9)
+		this.geometry = create_dice_geometry(SCALE * 0.9)
 		// Create material.
 		this.material = create_dice_materials(LABELS_20, SCALE / 2, 1.0)
 
@@ -44,10 +44,6 @@ AFRAME.registerPrimitive('a-dice', {
 })
 
 // helpers
-
-function calc_texture_size(approx) {
-	return Math.pow(2, Math.floor(Math.log(approx) / Math.log(2)))
-}
 
 function create_dice_materials(face_labels, size, margin) {
 	function create_text_texture(text, color, back_color) {
@@ -82,7 +78,7 @@ function create_dice_materials(face_labels, size, margin) {
 	return materials
 }
 
-function create_d6_geometry(radius) {
+function create_dice_geometry(radius) {
 	const vertices = [
 		[-1, -1, -1],
 		[1, -1, -1],
@@ -102,6 +98,10 @@ function create_d6_geometry(radius) {
 		[4, 5, 6, 7, 6]
 	]
 	return create_geom(vertices, faces, radius, 0.1, Math.PI / 4, 0.96)
+}
+
+function calc_texture_size(approx) {
+	return Math.pow(2, Math.floor(Math.log(approx) / Math.log(2)))
 }
 
 function create_geom(vertices, faces, radius, tab, af, chamfer) {
