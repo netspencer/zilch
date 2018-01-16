@@ -32,6 +32,17 @@ AFRAME.registerComponent('dice', {
 	}
 })
 
+AFRAME.registerPrimitive('a-dice', {
+	defaultComponents: {
+		dice: {}
+		// rotation: { x: -90, y: 0, z: 0 },
+		// position: { x: 0, y: 0, z: 0 }
+	},
+	mappings: {
+		sides: 'dice.sides'
+	}
+})
+
 // helpers
 
 function calc_texture_size(approx) {

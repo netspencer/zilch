@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import withRedux from 'next-redux-wrapper'
 import { initStore } from '../store'
-import DiceSet from '../components/DiceSet'
+import DiceBox from '../scenes/DiceBox'
 
 class Dice extends Component {
 	render() {
-		return <DiceSet />
+		return <DiceBox />
 	}
 }
 

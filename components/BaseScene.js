@@ -1,6 +1,13 @@
 // @flow
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Scene, Entity } from 'aframe-react'
+import styled from 'styled-components'
+
+const SceneContainer = styled.main`
+	width: 100vw;
+	height: 100vh;
+	background: url('/static/textures/concrete-texture.png');
+`
 
 export default class BaseScene extends Component {
 	state = {
@@ -16,19 +23,20 @@ export default class BaseScene extends Component {
 		}
 	}
 
+	renderAFrame = () => (
+		<Scene
+			vr-mode-ui={{ enabled: false }}
+			keyboard-shortcuts={{ enterVR: false }}
+		>
+			{this.props.children}
+		</Scene>
+	)
+
 	render() {
 		return (
-			<main style={{ height: '100vh', width: '100vw' }}>
-				{this.state.appRendered && (
-					<Scene
-						vr-mode-ui={{ enabled: false }}
-						keyboard-shortcuts={{ enterVR: false }}
-					>
-						{this.props.children}
-						<Entity camera look-controls={{ enabled: false }} />
-					</Scene>
-				)}
-			</main>
+			<SceneContainer>
+				{this.state.appRendered && this.renderAFrame()}
+			</SceneContainer>
 		)
 	}
 }
