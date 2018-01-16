@@ -9,7 +9,7 @@ import {
 	MATERIAL_OPTIONS,
 	LABEL_COLOR,
 	DICE_COLOR
-} from '../constants/dice'
+} from '../constants'
 
 AFRAME.registerComponent('dice', {
 	update: function() {

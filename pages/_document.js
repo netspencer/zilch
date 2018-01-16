@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
 			<html>
 				<Head>
 					<meta name="viewport" content="width=device-width, initial-scale=1" />
-					<title>distractions</title>
+					<title>ZILCH</title>
 					{this.props.styleTags}
 				</Head>
 				<body>

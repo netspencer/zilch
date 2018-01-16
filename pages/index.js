@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import withRedux from 'next-redux-wrapper'
 import { initStore } from '../store'
-import DiceBox from '../scenes/DiceBox'
+import Zilch from '../containers/Zilch'
 
-class Dice extends Component {
+class Index extends Component {
 	render() {
-		return <DiceBox />
+		return <Zilch />
 	}
 }
 
-export default withRedux(initStore)(Dice)
+export default withRedux(initStore)(Index)
